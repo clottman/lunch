@@ -1,5 +1,9 @@
 class HomeController < ApplicationController
-  def index
-  	@meals = Meal.all
+include HomeHelper
+
+  def index  	
+  	m = Meal.new
+  	m.getFoodsForMeal(Meal.locations['selleck'], 'Lunch')
+  	@meal = m
   end
 end

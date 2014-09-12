@@ -29,6 +29,9 @@ gem 'spring',        group: :development
 # Annotate models with DB schema
 gem 'annotate', '~> 2.6.5'
 
+# Nokogiri for HTML parsing
+gem 'nokogiri'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
