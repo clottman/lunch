@@ -2,7 +2,7 @@ class HomeController < ApplicationController
 include HomeHelper
 
   def index  	
-  	current_meal = 'lunch'  #select_current_meal
+  	current_meal = select_current_meal
 
   	# I want to do:
   	# where(meal_type: current_meal)

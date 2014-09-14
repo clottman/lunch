@@ -21,7 +21,8 @@ module HomeHelper
 		current_meal = ""
 		lunch_start = Time.current.change(hour:10, min:30)
 		dinner_start = Time.current.change(hour:3, min:30)
-		if now.minus_with_coercion(lunch_start) < 0
+		# no breakfast on weekends
+		if !now.saturday? && !now.sunday? && now.minus_with_coercion(lunch_start) < 0
 			current_meal = 'breakfast'
 		elsif now.minus_with_coercion(dinner_start) < 0
 			current_meal = 'lunch'
