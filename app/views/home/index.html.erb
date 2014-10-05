@@ -1,5 +1,7 @@
-<ul>
-	<% @meal.foods.each do |item| %>
-	<li><%= item.name %></li>
+	<%= form_tag change_location_path(), remote: true do %>
+		<%= select_tag "location", options_for_select(Meal.locations_for_display) %>
+		<%= submit_tag "GOOOO" %>
 	<% end %>
-</ul>
+<div id="meal_section">
+	<%= render partial: "meal_section" %>
+</div>

@@ -1,0 +1,8 @@
+	<ul>
+		<% @meal.foods.each do |item| %>
+		<li><%= item.name %></li>
+		<% end %>
+	</ul>
+	<% if @meal.foods.blank? %>
+	<h1> No information available. Are you sure this hall is open? </h1>
+	<% end %>
